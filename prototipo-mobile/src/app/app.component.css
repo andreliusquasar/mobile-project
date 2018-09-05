@@ -1,0 +1,17 @@
+
+
+
+@media only screen and (max-width: 600px) {
+  .b-t {
+    text-align: center;
+  }
+  .b-t a {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .b-t a {
+    width: 80%;
+  }
+}
