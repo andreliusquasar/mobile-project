@@ -1,6 +1,3 @@
-
-
-
 @media only screen and (max-width: 600px) {
   .b-t {
     text-align: center;
@@ -14,4 +11,8 @@
   .b-t a {
     width: 80%;
   }
+}
+
+.pesq-form {
+  padding-top: 20px;
 }
