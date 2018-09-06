@@ -1,0 +1,18 @@
+.cont-mob {
+  border: 1px solid #ccc;
+  padding-left: 0;
+  padding-right: 0;
+  /* background-color: #f2f2f2; */
+}
+.cont-item {
+  display: flex;
+  flex-direction: row;
+  padding: 7px 0;
+  border: 1px solid #ccc;
+}
+.cont-mat {
+  width: 100px;
+}
+.cont-mat:first-child {
+  font-weight: bold;
+}
