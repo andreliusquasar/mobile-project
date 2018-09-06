@@ -16,8 +16,6 @@ export class Contrato {
 
   email?: string;
 
-  cep?: string;
-
   endereco?: Endereco;
 
   usuario?: string;

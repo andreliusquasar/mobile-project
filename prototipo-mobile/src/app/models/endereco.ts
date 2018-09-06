@@ -6,7 +6,7 @@ export class Endereco {
 
   bairro?: string;
 
+  cep?: string;
+
   cidade?: string;
-
-
 }
