@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { ListaMobileComponent } from './lista-mobile/lista-mobile.component';
 import { ListaComponent } from './lista/lista.component';
+import { ContratosService } from './services/contratos.service';
 
 
 @NgModule({
@@ -13,10 +14,8 @@ import { ListaComponent } from './lista/lista.component';
     ListaComponent,
     ListaMobileComponent
   ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
+  imports: [BrowserModule],
+  providers: [ContratosService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
