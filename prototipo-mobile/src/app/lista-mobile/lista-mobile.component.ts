@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Contrato } from './../models/contrato.model';
 
 @Component({
   selector: 'app-lista-mobile',
@@ -8,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ListaMobileComponent implements OnInit {
 
   @Input()
-  recebeContratos = [];
+  recebeContratos: Array<Contrato>;
 
   constructor() { }
 
