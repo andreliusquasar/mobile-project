@@ -4,7 +4,7 @@
         #formularioPesquisa="ngForm" >
       <div class="row pesq-form">
           <div class="input-field col s12 m6">
-              <input [(ngModel)]="cpf" name="cpf" id="last_name" type="text" class="validate">
+              <input [(ngModel)]="cpf" name="cpf" id="last_name" type="text" class="validate" maxlength="11">
               <label for="last_name">CPF</label>
           </div>
           <div class="b-t input-field col s12 m6">
@@ -16,9 +16,9 @@
   </div>
 
   <div class="row">
-    <app-formulario></app-formulario>
-    <!-- <app-lista id="lista" [recebeContratos]="contratos"></app-lista> -->
-    <!-- <app-lista-mobile id="lista-mobile" [recebeContratos]="contratos"></app-lista-mobile> -->
+    <!-- <app-formulario></app-formulario> -->
+    <app-lista id="lista" [recebeContratos]="contratos" *ngIf="exibirLista" ></app-lista>
+    <app-lista-mobile id="lista-mobile" [recebeContratos]="contratos" *ngIf="exibirLista"></app-lista-mobile>
   </div>
 
 </div>
