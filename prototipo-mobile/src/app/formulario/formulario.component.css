@@ -1,7 +1,17 @@
 h5 {
   color: #ee6e73;
 }
-
 .collection-item {
   border-bottom: none;
+}
+.org-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.l-inp {
+  margin-left: 40px!important;
+}
+.a-t-s h5{
+  color: #26a69a;
 }
