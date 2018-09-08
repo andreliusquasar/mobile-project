@@ -11,7 +11,7 @@ import { ContratosService } from './services/contratos.service';
 export class AppComponent implements OnInit {
 
   title = 'app';
-  contratos = Array<Contrato>;
+  contratos: Array<Contrato>;
   cpf: string;
 
   constructor(private contratosService: ContratosService) { }
