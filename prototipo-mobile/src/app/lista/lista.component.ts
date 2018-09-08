@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ContratosService } from './../services/contratos.service';
+import { ContratosService } from '../services/contratos.service';
 
 @Component({
   selector: 'app-lista',
