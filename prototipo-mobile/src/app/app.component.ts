@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '../../node_modules/@angular/forms';
+import { NgForm } from '@angular/forms';
+import { Contrato } from './models/contrato.model';
 import { ContratosService } from './services/contratos.service';
 
 @Component({
@@ -10,13 +11,14 @@ import { ContratosService } from './services/contratos.service';
 export class AppComponent implements OnInit {
 
   title = 'app';
-  contratos = [];
+  contratos = Array<Contrato>;
   cpf: string;
 
   constructor(private contratosService: ContratosService) { }
 
   ngOnInit() {
     this.contratos = this.contratosService.getContratos();
+    console.log(this.contratos);
   }
 
   onPesquisar(formularioPesquisa: NgForm) {
