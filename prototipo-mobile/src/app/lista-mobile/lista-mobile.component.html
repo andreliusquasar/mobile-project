@@ -1,27 +1,27 @@
-<div class="col s12 cont-mob">
+<div class="col s12 cont-mob" *ngFor="let item of recebeContratos" >
   <div class="cont-item">
       <div class="col s6 cont-mat">Contrato</div>
-      <div class="col s6 cont-mat">671167</div>
+      <div class="col s6 cont-mat">{{item.contrato}}</div>
   </div>
   <div class="cont-item">
       <div class="col s6 cont-mat">Tipo</div>
-      <div class="col s6 cont-mat">Carro</div>
+      <div class="col s6 cont-mat">{{item.tipo}}</div>
   </div>
   <div class="cont-item">
       <div class="col s6 cont-mat">Fabricante</div>
-      <div class="col s6 cont-mat">Chevrolet</div>
+      <div class="col s6 cont-mat">{{item.fabricante}}</div>
   </div>
   <div class="cont-item">
       <div class="col s6 cont-mat">Modelo</div>
-      <div class="col s6 cont-mat">Corsa Sed. Maxx 1.0/1.0 FlexPower 8v 4p</div>
+      <div class="col s6 cont-mat">{{item.modelo}}</div>
   </div>
   <div class="cont-item">
       <div class="col s6 cont-mat">Ano</div>
-      <div class="col s6 cont-mat">2004</div>
+      <div class="col s6 cont-mat">{{item.ano}}</div>
   </div>
   <div class="cont-item">
       <div class="col s6 cont-mat">Placa</div>
-      <div class="col s6 cont-mat">RRT5877</div>
+      <div class="col s6 cont-mat">{{item.placa}}</div>
   </div>
 
 </div>

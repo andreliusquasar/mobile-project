@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-lista-mobile',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista-mobile.component.css']
 })
 export class ListaMobileComponent implements OnInit {
+
+  @Input()
+  recebeContratos = [];
 
   constructor() { }
 

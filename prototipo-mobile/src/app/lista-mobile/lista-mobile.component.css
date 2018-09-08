@@ -2,7 +2,10 @@
   border: 1px solid #ccc;
   padding-left: 0;
   padding-right: 0;
-  /* background-color: #f2f2f2; */
+  margin-bottom: 40px;
+}
+.cont-mob:nth-child(2n){
+  background-color: #d7efec;
 }
 .cont-item {
   display: flex;
