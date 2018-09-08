@@ -9,15 +9,14 @@
           <th>Placa</th>
       </tr>
     </thead>
-
     <tbody>
         <tr *ngFor="let item of recebeContratos" >
-            <td>{{item.documento.contrato}}</td>
-            <td>{{item.documento.tipo}}</td>
-            <td>{{item.documento.fabricante}}</td>
-            <td>{{item.documento.modelo}}</td>
-            <td>{{item.documento.ano}}</td>
-            <td>{{item.documento.placa}}</td>
+            <td>{{item?.documento.contrato}}</td>
+            <td>{{item?.documento.tipo}}</td>
+            <td>{{item?.documento.fabricante}}</td>
+            <td>{{item?.documento.modelo}}</td>
+            <td>{{item?.documento.ano}}</td>
+            <td>{{item?.documento.placa}}</td>
           </tr>
     </tbody>
   </table>
