@@ -1,53 +1,54 @@
-<form class="col s12">
+
+<form class="col s12" (ngSubmit)="onEditar(formularioEdicao)" #formularioEdicao="ngForm">
   <div class="row">
     <div class="input-field col s12 m4 l2">
-      <input id="celular" type="text" class="validate">
+      <input name="celular" [(ngModel)]="contrato.cliente.celular" id="celular" type="text" class="validate">
       <label for="celular">Celular</label>
     </div>
     <div class="input-field col s12 m4 l2">
-      <input id="telefone" type="text" class="validate">
+      <input name="telefone" [(ngModel)]="contrato.cliente.telefone" id="telefone" type="text" class="validate">
       <label for="telefone">Telefone</label>
     </div>
     <div class="input-field col s12 m4 l2">
-      <input id="nascimento" type="text" class="validate">
+      <input name="nascimento" [(ngModel)]="contrato.cliente.nascimento" id="nascimento" type="text" class="validate">
       <label for="nascimento">Dt Nascimento</label>
     </div>
     <div class="input-field col s12 m4 l3">
-      <input id="rg" type="text" class="validate">
+      <input name="rg" [(ngModel)]="contrato.cliente.rg" id="rg" type="text" class="validate">
       <label for="rg">RG</label>
     </div>
     <div class="input-field col s12 m4 l3">
-      <input id="e-mail" type="text" class="validate">
+      <input name="email" [(ngModel)]="contrato.cliente.email" id="e-mail" type="text" class="validate">
       <label for="e-mail">E-Mail</label>
     </div>
   </div>
 
   <div class="row">
     <div class="input-field col s12 m4 l2">
-      <input id="cep" type="text" class="validate">
+      <input name="cep" [(ngModel)]="contrato.endereco.cep" id="cep" type="text" class="validate">
       <label for="cep">CEP</label>
     </div>
     <div class="input-field col s12 m4 l7">
-      <input id="endereco" type="text" class="validate">
+      <input name="logradouro" [(ngModel)]="contrato.endereco.logradouro" id="endereco" type="text" class="validate">
       <label for="endereco">Endereço</label>
     </div>
     <div class="input-field col s12 m4 l2">
-      <input id="numero" type="text" class="validate">
+      <input name="numero" [(ngModel)]="contrato.endereco.numero" id="numero" type="text" class="validate">
       <label for="numero">Número</label>
     </div>
     <div class="input-field col s12 m4 l1">
-      <input id="uf" type="text" class="validate">
+      <input name="uf" [(ngModel)]="contrato.endereco.uf" id="uf" type="text" class="validate">
       <label for="uf">UF</label>
     </div>
   </div>
 
   <div class="row">
     <div class="input-field col s12 m6 l6">
-      <input id="bairro" type="text" class="validate">
+      <input name="bairro" [(ngModel)]="contrato.endereco.bairro" id="bairro" type="text" class="validate">
       <label for="bairro">Bairro</label>
     </div>
     <div class="input-field col s12 m6 l6">
-      <input id="cidade" type="text" class="validate">
+      <input name="cidade" [(ngModel)]="contrato.endereco.cidade" id="cidade" type="text" class="validate">
       <label for="cidade">Cidade</label>
     </div>
   </div>
@@ -58,11 +59,11 @@
         <li class="collection-item">
           <div class="org-input">
             <div>
-              <input type="checkbox" id="check-1" checked>
+              <input name="usuarioInternetChecked" [(ngModel)]="contrato.senhas.usuarioInternetChecked" type="checkbox" id="check-1" checked>
               <label for="check-1">671167</label>
             </div>
             <div class="input-field col s12 m4 l4 l-inp">
-              <input id="user-internet" type="text" class="validate">
+              <input name="usuarioInternet" [(ngModel)]="contrato.senhas.usuarioInternet" id="user-internet" type="text" class="validate">
               <label for="user-internet">Usuário Internet</label>
             </div>
           </div>
@@ -70,11 +71,11 @@
         <li class="collection-item">
           <div class="org-input">
             <div>
-              <input type="checkbox" id="check-2">
+              <input name="senhaInternetChecked" [(ngModel)]="contrato.senhas.senhaInternetChecked" type="checkbox" id="check-2">
               <label for="check-2">671191</label>
             </div>
             <div class="input-field col s12 m4 l4 l-inp">
-              <input id="senha-internet" type="text" class="validate">
+              <input name="senhaInternet" [(ngModel)]="contrato.senhas.senhaInternet" id="senha-internet" type="text" class="validate">
               <label for="senha-internet">Senha Internet</label>
             </div>
           </div>
@@ -82,11 +83,11 @@
         <li class="collection-item">
           <div class="org-input">
             <div>
-              <input type="checkbox" id="check-3">
+              <input name="senhaSegurancaChecked" [(ngModel)]="contrato.senhas.senhaSegurancaChecked" type="checkbox" id="check-3">
               <label for="check-3">671608</label>
             </div>
             <div class="input-field col s12 m4 l4 l-inp">
-              <input id="senha-seguranca" type="text" class="validate">
+              <input name="senhaSeguranca" [(ngModel)]="contrato.senhas.senhaSeguranca" id="senha-seguranca" type="text" class="validate">
               <label for="senha-seguranca">Senha Segurança</label>
             </div>
           </div>
@@ -96,7 +97,7 @@
 
   <div class="row">
       <div class="b-t input-field col s12 m6">
-          <a class="waves-effect waves-light btn">Confirmar</a>
+          <button type="submit" class="waves-effect waves-light btn">Confirmar</button>
         </div>
   </div>
 

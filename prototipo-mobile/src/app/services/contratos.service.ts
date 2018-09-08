@@ -35,6 +35,14 @@ export class ContratosService {
           modelo: 'Corsa Sed. Maxx 1.0 / 1.0 Flexpower 8V 4P',
           ano: '2004',
           placa: 'RRRT5877',
+        },
+        senhas: {
+          usuarioInternetChecked: null,
+          usuarioInternet: null,
+          senhaInternetChecked: null,
+          senhaInternet: null,
+          senhaSegurancaChecked: null,
+          senhaSeguranca: null
         }
       },
       {
@@ -62,6 +70,14 @@ export class ContratosService {
           modelo: 'F-250 XLT 3.9 4X2 DIESEL TB',
           ano: '2011',
           placa: 'ENY4685'
+        },
+        senhas: {
+          usuarioInternetChecked: null,
+          usuarioInternet: null,
+          senhaInternetChecked: null,
+          senhaInternet: null,
+          senhaSegurancaChecked: null,
+          senhaSeguranca: null
         }
       },
       {
@@ -89,6 +105,14 @@ export class ContratosService {
           modelo: 'HR 2.5 TCI DIESEL (RS/RD)',
           ano: '2014',
           placa: 'FWH0429'
+        },
+        senhas: {
+          usuarioInternetChecked: null,
+          usuarioInternet: null,
+          senhaInternetChecked: null,
+          senhaInternet: null,
+          senhaSegurancaChecked: null,
+          senhaSeguranca: null
         }
       },
       {
@@ -116,6 +140,14 @@ export class ContratosService {
           modelo: 'F-250 XLT 3.9 4X2 DIESEL TB',
           ano: '2015',
           placa: 'DAT1829'
+        },
+        senhas: {
+          usuarioInternetChecked: null,
+          usuarioInternet: null,
+          senhaInternetChecked: null,
+          senhaInternet: null,
+          senhaSegurancaChecked: null,
+          senhaSeguranca: null
         }
       },
       {
@@ -144,6 +176,14 @@ export class ContratosService {
           ano: '2013',
           placa: 'XIY2845'
         },
+        senhas: {
+          usuarioInternetChecked: null,
+          usuarioInternet: null,
+          senhaInternetChecked: null,
+          senhaInternet: null,
+          senhaSegurancaChecked: null,
+          senhaSeguranca: null
+        }
       }
 
     ];
