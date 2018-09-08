@@ -1,16 +1,16 @@
 export class Cliente {
-  cpf: string;
+  public cpf?: string;
 
-  rg: string;
+  public rg?: string;
 
-  telefone: string;
+  public telefone?: string;
 
-  celular: string;
+  public celular?: string;
 
-  nascimento: string;
+  public nascimento?: string;
 
-  email: string;
+  public email?: string;
 
-  nome: string;
+  public nome?: string;
 
 }

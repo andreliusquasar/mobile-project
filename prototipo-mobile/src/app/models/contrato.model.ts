@@ -1,6 +1,7 @@
 import { Cliente } from './cliente.model';
 import { Documento } from './documento.model';
 import { Endereco } from './endereco.model';
+import { Senha } from './senha.model';
 
 export class Contrato {
 
@@ -9,5 +10,7 @@ export class Contrato {
  documento: Documento;
 
  endereco: Endereco;
+
+ senhas: Senha;
 
 }
