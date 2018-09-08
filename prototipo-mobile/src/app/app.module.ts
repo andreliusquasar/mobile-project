@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FormularioComponent } from './formulario/formulario.component';
@@ -14,7 +15,7 @@ import { ContratosService } from './services/contratos.service';
     ListaComponent,
     ListaMobileComponent
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, FormsModule],
   providers: [ContratosService],
   bootstrap: [AppComponent]
 })

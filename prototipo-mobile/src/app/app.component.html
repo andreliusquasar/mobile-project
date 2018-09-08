@@ -1,16 +1,17 @@
 <div class="container">
   <div class="row">
-    <form class="col s12">
+    <form class="col s12" (ngSubmit)="onPesquisar(formularioPesquisa)" #formularioPesquisa="ngForm" >
       <div class="row pesq-form">
           <div class="input-field col s12 m6">
-              <input id="last_name" type="text" class="validate">
-              <label for="last_name">CNPJ/CPF</label>
+              <input [(ngModel)]="cpf" name="cpf" id="last_name" type="text" class="validate">
+              <label for="last_name">CPF</label>
           </div>
           <div class="b-t input-field col s12 m6">
-            <a class="waves-effect waves-light btn">Pesquisar</a>
+            <button type="submit" class="waves-effect waves-light btn">Pesquisar</button>
           </div>
       </div>
     </form>
+    <h5>Nome:</h5>
   </div>
 
   <div class="row">
