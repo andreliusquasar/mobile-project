@@ -1,0 +1,7 @@
+.table-click {
+  cursor: pointer;
+}
+.table-click:hover {
+  background-color: rgba(112, 173, 71, 0.4);
+}
+

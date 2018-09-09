@@ -14,10 +14,10 @@ export class ContratosService {
         cliente: {
           cpf: '00000000000',
           rg: '125.485.485',
-          telefone: '11-222-5484',
-          celular: '11-9999-9999',
-          nascimento: '20/06/1980',
-          email: 'email@exemplo.com.br',
+          telefone: '11-32584-45875',
+          celular: '11-1548-5487',
+          nascimento: '10/03/1970',
+          email: 'fabio@gmail.com.br',
           nome: 'Fabio Castro Gomes'
         },
         endereco: {
@@ -37,7 +37,7 @@ export class ContratosService {
           placa: 'RRRT5877',
         },
         senhas: {
-          usuarioInternetChecked: null,
+          usuarioInternetChecked: true,
           usuarioInternet: null,
           senhaInternetChecked: null,
           senhaInternet: null,
@@ -48,20 +48,20 @@ export class ContratosService {
       {
         cliente: {
           cpf: '11111111111',
-          rg: '125.485.485',
+          rg: '300.128.154-5',
           telefone: '11-222-5484',
           celular: '11-9999-9999',
           nascimento: '20/06/1980',
-          email: 'email@exemplo.com.br',
+          email: 'antonio@hotmail.com.br',
           nome: 'Antonio Alberto Oliveira'
         },
         endereco: {
-          logradouro: 'Ruas Estrada São Caetano',
-          numero: '222',
+          logradouro: 'Avenida Castro Alves',
+          numero: '21',
           uf: 'SP',
-          bairro: 'Vila Gomes',
+          bairro: 'Vila Ema',
           cidade: 'São Paulo',
-          cep: '00000000'
+          cep: '01504-584'
         },
         documento: {
           contrato: '671191',
@@ -83,24 +83,24 @@ export class ContratosService {
       {
         cliente: {
           cpf: '22222222222',
-          rg: '125.485.485',
-          telefone: '11-222-5484',
-          celular: '11-9999-9999',
+          rg: '487.600.000-x',
+          telefone: '11-32598-9958',
+          celular: '11-95487-5487',
           nascimento: '20/06/1980',
-          email: 'email@exemplo.com.br',
+          email: 'fernanda@ig.com.br',
           nome: 'Fernanda Gomes de Castro'
         },
         endereco: {
-          logradouro: 'Ruas Estrada São Caetano',
-          numero: '222',
+          logradouro: 'Avenida Angélica',
+          numero: '500',
           uf: 'SP',
           bairro: 'Vila Gomes',
           cidade: 'São Paulo',
-          cep: '00000000'
+          cep: '03265-6548'
         },
         documento: {
           contrato: '671608',
-          tipo: 'UTILITARIO',
+          tipo: 'CARRO',
           fabricante: 'HYUNDAI',
           modelo: 'HR 2.5 TCI DIESEL (RS/RD)',
           ano: '2014',
@@ -118,7 +118,7 @@ export class ContratosService {
       {
         cliente: {
           cpf: '33333333333',
-          rg: '125.485.485',
+          rg: '658.999.365-Z',
           telefone: '11-222-5484',
           celular: '11-9999-9999',
           nascimento: '20/06/1980',
@@ -126,12 +126,12 @@ export class ContratosService {
           nome: 'Rodrigo da Silva'
         },
         endereco: {
-          logradouro: 'Ruas Estrada São Caetano',
-          numero: '222',
+          logradouro: 'Rua Santa Catarina',
+          numero: '1235',
           uf: 'SP',
-          bairro: 'Vila Gomes',
+          bairro: 'São Caetano do Sul',
           cidade: 'São Paulo',
-          cep: '00000000'
+          cep: '32658-965'
         },
         documento: {
           contrato: '671899',
@@ -157,16 +157,16 @@ export class ContratosService {
           telefone: '11-222-5484',
           celular: '11-9999-9999',
           nascimento: '20/06/1980',
-          email: 'email@exemplo.com.br',
+          email: 'leandro@yahoo.com.br',
           nome: 'Leandro de Castro'
         },
         endereco: {
-          logradouro: 'Ruas Estrada São Caetano',
-          numero: '222',
+          logradouro: 'Avenida Casa Verde',
+          numero: '6584',
           uf: 'SP',
-          bairro: 'Vila Gomes',
+          bairro: 'Casa Verde',
           cidade: 'São Paulo',
-          cep: '00000000'
+          cep: '95847-658'
         },
         documento: {
           contrato: '671578',
@@ -185,7 +185,6 @@ export class ContratosService {
           senhaSeguranca: null
         }
       },
-      ,
       {
         cliente: {
           cpf: '00000000000',
@@ -221,7 +220,6 @@ export class ContratosService {
           senhaSeguranca: null
         }
       },
-      ,
       {
         cliente: {
           cpf: '00000000000',
@@ -257,7 +255,6 @@ export class ContratosService {
           senhaSeguranca: null
         }
       },
-      ,
       {
         cliente: {
           cpf: '11111111111',
