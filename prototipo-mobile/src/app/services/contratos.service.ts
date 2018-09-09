@@ -38,7 +38,7 @@ export class ContratosService {
         },
         senhas: {
           usuarioInternetChecked: true,
-          usuarioInternet: null,
+          usuarioInternet: 'XSDEF201',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -72,8 +72,8 @@ export class ContratosService {
           placa: 'ENY4685'
         },
         senhas: {
-          usuarioInternetChecked: null,
-          usuarioInternet: null,
+          usuarioInternetChecked: true,
+          usuarioInternet: 'XSDEF201',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -107,8 +107,8 @@ export class ContratosService {
           placa: 'FWH0429'
         },
         senhas: {
-          usuarioInternetChecked: null,
-          usuarioInternet: null,
+          usuarioInternetChecked: true,
+          usuarioInternet: 'XSDEF201',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -142,8 +142,8 @@ export class ContratosService {
           placa: 'DAT1829'
         },
         senhas: {
-          usuarioInternetChecked: null,
-          usuarioInternet: null,
+          usuarioInternetChecked: true,
+          usuarioInternet: 'XSDEF201',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -177,8 +177,8 @@ export class ContratosService {
           placa: 'XIY2845'
         },
         senhas: {
-          usuarioInternetChecked: null,
-          usuarioInternet: null,
+          usuarioInternetChecked: true,
+          usuarioInternet: 'XSDEF201',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -212,8 +212,8 @@ export class ContratosService {
           placa: 'XIY2845'
         },
         senhas: {
-          usuarioInternetChecked: null,
-          usuarioInternet: null,
+          usuarioInternetChecked: true,
+          usuarioInternet: 'XSDEF201',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -247,8 +247,8 @@ export class ContratosService {
           placa: 'XIY2845'
         },
         senhas: {
-          usuarioInternetChecked: null,
-          usuarioInternet: null,
+          usuarioInternetChecked: true,
+          usuarioInternet: 'XSDEF201',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -282,8 +282,8 @@ export class ContratosService {
           placa: 'XIY2845'
         },
         senhas: {
-          usuarioInternetChecked: null,
-          usuarioInternet: null,
+          usuarioInternetChecked: true,
+          usuarioInternet: 'XSDEF201',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -317,8 +317,8 @@ export class ContratosService {
           placa: 'XIY2845'
         },
         senhas: {
-          usuarioInternetChecked: null,
-          usuarioInternet: null,
+          usuarioInternetChecked: true,
+          usuarioInternet: 'XSDEF201',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -352,8 +352,8 @@ export class ContratosService {
           placa: 'XIY2845'
         },
         senhas: {
-          usuarioInternetChecked: null,
-          usuarioInternet: null,
+          usuarioInternetChecked: true,
+          usuarioInternet: 'XSDEF201',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -387,8 +387,8 @@ export class ContratosService {
           placa: 'XIY2845'
         },
         senhas: {
-          usuarioInternetChecked: null,
-          usuarioInternet: null,
+          usuarioInternetChecked: true,
+          usuarioInternet: 'XSDEF201',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -422,8 +422,8 @@ export class ContratosService {
           placa: 'XIY2845'
         },
         senhas: {
-          usuarioInternetChecked: null,
-          usuarioInternet: null,
+          usuarioInternetChecked: true,
+          usuarioInternet: 'XSDEF201',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -457,8 +457,8 @@ export class ContratosService {
           placa: 'XIY2845'
         },
         senhas: {
-          usuarioInternetChecked: null,
-          usuarioInternet: null,
+          usuarioInternetChecked: true,
+          usuarioInternet: 'XSDEF201',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -492,8 +492,8 @@ export class ContratosService {
           placa: 'XIY2845'
         },
         senhas: {
-          usuarioInternetChecked: null,
-          usuarioInternet: null,
+          usuarioInternetChecked: true,
+          usuarioInternet: 'XSDEF201',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
