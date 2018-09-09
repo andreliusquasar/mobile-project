@@ -13,15 +13,21 @@ export class AppComponent implements OnInit {
   title = 'app';
   contratos = Array<Contrato>;
   cpf: string;
+  exibirLista = false;
 
   constructor(private contratosService: ContratosService) { }
 
   ngOnInit() {
-    this.contratos = this.contratosService.getContratos();
-    console.log(this.contratos);
+
   }
 
   onPesquisar(formularioPesquisa: NgForm) {
+
+    this.contratos = this.contratosService.getContratoById(formularioPesquisa.value.cpf);
+
+    if (this.contratos.length > 0) {
+      this.exibirLista = true;
+    }
   }
 
 }
