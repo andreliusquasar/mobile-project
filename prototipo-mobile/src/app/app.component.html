@@ -1,10 +1,35 @@
+<nav>
+  <div class="nav-wrapper logotipo">
+    <!-- <a href="#" class="brand-logo center">Logo</a> -->
+    <img src="../assets/img/logotipo.png" alt="">
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li>
+        <a href="sass.html">Sass</a>
+      </li>
+      <li>
+        <a href="badges.html">Components</a>
+      </li>
+      <li>
+        <a href="collapsible.html">JavaScript</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <div class="container">
   <div class="row">
     <form class="col s12" (ngSubmit)="onPesquisar(formularioPesquisa)"
         #formularioPesquisa="ngForm" >
       <div class="row pesq-form">
           <div class="input-field col s12 m6">
-              <input [(ngModel)]="contrato?.cliente.cpf" name="cpf" id="last_name" type="text" class="validate" maxlength="11">
+              <input
+                [(ngModel)]="contrato?.cliente.cpf"
+                name="cpf"
+                id="last_name"
+                type="text"
+                class="validate"
+                maxlength="11"
+                >
               <label for="last_name">CPF</label>
           </div>
           <div class="b-t input-field col s12 m6">
@@ -190,7 +215,7 @@
     <p>Alteração realizada com sucesso!</p>
   </div>
   <div class="modal-footer">
-    <a href="#!" class="modal-close waves-effect waves-green btn-flat" (click)="closeModal()">Fechar</a>
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat cor-btn" (click)="closeModal()">Fechar</a>
   </div>
 </div>
 <!-- MODAL -->
