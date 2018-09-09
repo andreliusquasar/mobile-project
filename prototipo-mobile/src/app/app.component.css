@@ -34,7 +34,7 @@
   align-items: center;
 }
 .logotipo > img {
-  width: 20%;
+  width: 125px;
 }
 .nav-wrapper, .btn, .cor-btn {
   background-color: #70ad47;
