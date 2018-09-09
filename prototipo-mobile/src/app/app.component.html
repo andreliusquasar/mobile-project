@@ -151,7 +151,7 @@
     </ng-container>
 
     <ng-container *ngIf="exibirLista" >
-      <div class="col s12 cont-mob" *ngFor="let item of contratos" id="lista-mobile">
+      <div class="col s12 cont-mob" *ngFor="let item of contratos" id="lista-mobile" (click)="getItemLista(item)">
         <div class="cont-item">
           <div class="col s6 cont-mat">Contrato</div>
           <div class="col s6 cont-mat">{{item.documento.contrato}}</div>
@@ -181,9 +181,18 @@
 
     </ng-container>
 
-
-    <!-- <app-lista id="lista" [recebeContratos]="contratos" (selecionado)="recebeSelecionado($event)"></app-lista> -->
-    <!-- <app-lista-mobile id="lista-mobile" [recebeContratos]="contratos" *ngIf="exibirLista"></app-lista-mobile> -->
   </div>
+
+
+<!-- MODAL -->
+<div id="modal1" class="modal" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions">
+  <div class="modal-content">
+    <p>Alteração realizada com sucesso!</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat" (click)="closeModal()">Fechar</a>
+  </div>
+</div>
+<!-- MODAL -->
 
 </div>

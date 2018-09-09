@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { MaterializeAction } from 'angular2-materialize';
 import { Cliente } from './models/cliente.model';
 import { Contrato } from './models/contrato.model';
 import { Documento } from './models/documento.model';
@@ -7,13 +8,14 @@ import { Endereco } from './models/endereco.model';
 import { Senha } from './models/senha.model';
 import { ContratosService } from './services/contratos.service';
 
+
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = "app";
+  title = 'app';
   contratos: Array<Contrato>;
   cpf: string;
   exibirLista = false;
@@ -21,6 +23,20 @@ export class AppComponent implements OnInit {
   pesquisou = false;
   contrato: Contrato;
   formularioContrato: Contrato;
+
+
+  // MODAL
+  modalActions = new EventEmitter<string | MaterializeAction>();
+  openModal() {
+    this.modalActions.emit({ action: 'modal', params: ['open'] });
+  }
+  closeModal() {
+    this.modalActions.emit({ action: 'modal', params: ['close'] });
+    this.exibirForm = false;
+    this.inicializarObjetos();
+  }
+    // MODAL
+
 
   constructor(private contratosService: ContratosService) {}
 
@@ -38,7 +54,9 @@ export class AppComponent implements OnInit {
     }
   }
 
-  onEditar(formularioEdicao: NgForm) {}
+  onEditar(formularioEdicao: NgForm) {
+    this.openModal();
+  }
 
 
   getItemLista(contrato: Contrato): void {
@@ -50,8 +68,6 @@ export class AppComponent implements OnInit {
     }
   }
 
-
-
   private inicializarObjetos(): void {
     this.contrato = new Contrato();
     this.contrato.cliente = new Cliente();
@@ -59,7 +75,5 @@ export class AppComponent implements OnInit {
     this.contrato.endereco = new Endereco();
     this.contrato.senhas = new Senha();
   }
-
-
 
 }
