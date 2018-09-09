@@ -4,4 +4,27 @@
 .table-click:hover {
   background-color: rgba(112, 173, 71, 0.4);
 }
-
+.cont-mob {
+  border: 1px solid #ccc;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 40px;
+}
+.cont-mob:nth-child(2n){
+  background-color: #d7efec;
+}
+.cont-item {
+  display: flex;
+  flex-direction: row;
+  padding: 7px 0;
+  border: 1px solid #ccc;
+}
+.cont-mat {
+  width: 100px;
+}
+.cont-mat:first-child {
+  font-weight: bold;
+}
+#lista-mobile {
+  cursor: pointer;
+}
