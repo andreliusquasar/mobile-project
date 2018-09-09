@@ -4,7 +4,7 @@
         #formularioPesquisa="ngForm" >
       <div class="row pesq-form">
           <div class="input-field col s12 m6">
-              <input [(ngModel)]="cpf" name="cpf" id="last_name" type="text" class="validate" maxlength="11">
+              <input [(ngModel)]="contrato?.cliente.cpf" name="cpf" id="last_name" type="text" class="validate" maxlength="11">
               <label for="last_name">CPF</label>
           </div>
           <div class="b-t input-field col s12 m6">
@@ -15,8 +15,174 @@
   </div>
 
   <div class="row">
-    <app-formulario [contrato]="formularioContrato"></app-formulario>
-    <app-lista id="lista" [recebeContratos]="contratos" (selecionado)="recebeSelecionado($event)"></app-lista>
+    <!-- <app-formulario [contrato]="formularioContrato"></app-formulario> -->
+
+    <!-- FORMULARIO INIT -->
+      <form class="col s12" (ngSubmit)="onEditar(formularioEdicao)" #formularioEdicao="ngForm" *ngIf="exibirForm">
+        <div class="row">
+          <div class="input-field col s12 m4 l2">
+            <input name="celular" #celular [(ngModel)]="contrato.cliente.celular" id="celular" type="text" class="validate">
+            <label for="celular" [ngClass]="{'active': celular.value}">Celular</label>
+          </div>
+          <div class="input-field col s12 m4 l2">
+            <input name="telefone" #telefone [(ngModel)]="contrato.cliente.telefone" id="telefone" type="text" class="validate">
+            <label for="telefone" [ngClass]="{'active': telefone.value}">Telefone</label>
+          </div>
+          <div class="input-field col s12 m4 l2">
+            <input name="nascimento" #nasc [(ngModel)]="contrato.cliente.nascimento" id="nascimento" type="text" class="validate">
+            <label for="nascimento" [ngClass]="{'active': nasc.value}">Dt Nascimento</label>
+          </div>
+          <div class="input-field col s12 m4 l3">
+            <input name="rg" #rg [(ngModel)]="contrato.cliente.rg" id="rg" type="text" class="validate">
+            <label for="rg" [ngClass]="{'active': rg.value}">RG</label>
+          </div>
+          <div class="input-field col s12 m4 l3">
+            <input name="email" #email [(ngModel)]="contrato.cliente.email" id="e-mail" type="text" class="validate">
+            <label for="e-mail" [ngClass]="{'active': email.value}">E-Mail</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12 m4 l2">
+            <input name="cep" #cep [(ngModel)]="contrato.endereco.cep" id="cep" type="text" class="validate">
+            <label for="cep" [ngClass]="{'active': cep.value}">CEP</label>
+          </div>
+          <div class="input-field col s12 m4 l7">
+            <input name="logradouro" #logradouro [(ngModel)]="contrato.endereco.logradouro" id="endereco" type="text" class="validate">
+            <label for="endereco" [ngClass]="{'active': logradouro.value}">Endereço</label>
+          </div>
+          <div class="input-field col s12 m4 l2">
+            <input name="numero" #numero [(ngModel)]="contrato.endereco.numero" id="numero" type="text" class="validate">
+            <label for="numero" [ngClass]="{'active': numero.value}">Número</label>
+          </div>
+          <div class="input-field col s12 m4 l1">
+            <input name="uf" #uf [(ngModel)]="contrato.endereco.uf" id="uf" type="text" class="validate">
+            <label for="uf" [ngClass]="{'active': uf.value}">UF</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12 m6 l6">
+            <input name="bairro" #bairro [(ngModel)]="contrato.endereco.bairro" id="bairro" type="text" class="validate">
+            <label for="bairro" [ngClass]="{'active': bairro.value}">Bairro</label>
+          </div>
+          <div class="input-field col s12 m6 l6">
+            <input name="cidade" #cidade [(ngModel)]="contrato.endereco.cidade" id="cidade" type="text" class="validate">
+            <label for="cidade" [ngClass]="{'active': cidade.value}">Cidade</label>
+          </div>
+        </div>
+
+        <div class="row user-mobile" *ngIf="false">
+          <ul class="collection with-header">
+            <li class="collection-header a-t-s">
+              <h5>Cadastro de Senhas</h5>
+            </li>
+            <li class="collection-item">
+              <div class="org-input">
+                <div>
+                  <input name="usuarioInternetChecked" [(ngModel)]="contrato.senhas.usuarioInternetChecked" type="checkbox" id="check-1" checked>
+                  <label for="check-1">671167</label>
+                </div>
+                <div class="input-field col s12 m4 l4 l-inp">
+                  <input name="usuarioInternet" [(ngModel)]="contrato.senhas.usuarioInternet" id="user-internet" type="text" class="validate">
+                  <label for="user-internet">Usuário Internet</label>
+                </div>
+              </div>
+            </li>
+            <li class="collection-item">
+              <div class="org-input">
+                <div>
+                  <input name="senhaInternetChecked" [(ngModel)]="contrato.senhas.senhaInternetChecked" type="checkbox" id="check-2">
+                  <label for="check-2">671191</label>
+                </div>
+                <div class="input-field col s12 m4 l4 l-inp">
+                  <input name="senhaInternet" [(ngModel)]="contrato.senhas.senhaInternet" id="senha-internet" type="text" class="validate">
+                  <label for="senha-internet">Senha Internet</label>
+                </div>
+              </div>
+            </li>
+            <li class="collection-item">
+              <div class="org-input">
+                <div>
+                  <input name="senhaSegurancaChecked" [(ngModel)]="contrato.senhas.senhaSegurancaChecked" type="checkbox" id="check-3">
+                  <label for="check-3">671608</label>
+                </div>
+                <div class="input-field col s12 m4 l4 l-inp">
+                  <input name="senhaSeguranca" [(ngModel)]="contrato.senhas.senhaSeguranca" id="senha-seguranca" type="text" class="validate">
+                  <label for="senha-seguranca">Senha Segurança</label>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="row">
+          <div class="b-t input-field col s12 m6">
+            <button type="submit" class="waves-effect waves-light btn">Confirmar</button>
+          </div>
+        </div>
+
+      </form>
+    <!-- FORMULARIO END -->
+
+    <ng-container *ngIf="exibirLista">
+      <table class="striped" id="lista">
+        <thead>
+          <tr>
+            <th>Contrato</th>
+            <th>Tipo</th>
+            <th>Fabricante</th>
+            <th>Modelo</th>
+            <th>Ano</th>
+            <th>Placa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of contratos" class="table-click" (click)="getItemLista(item)">
+            <td>{{item?.documento.contrato}}</td>
+            <td>{{item?.documento.tipo}}</td>
+            <td>{{item?.documento.fabricante}}</td>
+            <td>{{item?.documento.modelo}}</td>
+            <td>{{item?.documento.ano}}</td>
+            <td>{{item?.documento.placa}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ng-container>
+
+    <ng-container *ngIf="exibirLista" >
+      <div class="col s12 cont-mob" *ngFor="let item of contratos" id="lista-mobile">
+        <div class="cont-item">
+          <div class="col s6 cont-mat">Contrato</div>
+          <div class="col s6 cont-mat">{{item.documento.contrato}}</div>
+        </div>
+        <div class="cont-item">
+          <div class="col s6 cont-mat">Tipo</div>
+          <div class="col s6 cont-mat">{{item.documento.tipo}}</div>
+        </div>
+        <div class="cont-item">
+          <div class="col s6 cont-mat">Fabricante</div>
+          <div class="col s6 cont-mat">{{item.documento.fabricante}}</div>
+        </div>
+        <div class="cont-item">
+          <div class="col s6 cont-mat">Modelo</div>
+          <div class="col s6 cont-mat">{{item.documento.modelo}}</div>
+        </div>
+        <div class="cont-item">
+          <div class="col s6 cont-mat">Ano</div>
+          <div class="col s6 cont-mat">{{item.documento.ano}}</div>
+        </div>
+        <div class="cont-item">
+          <div class="col s6 cont-mat">Placa</div>
+          <div class="col s6 cont-mat">{{item.documento.placa}}</div>
+        </div>
+
+      </div>
+
+    </ng-container>
+
+
+    <!-- <app-lista id="lista" [recebeContratos]="contratos" (selecionado)="recebeSelecionado($event)"></app-lista> -->
     <!-- <app-lista-mobile id="lista-mobile" [recebeContratos]="contratos" *ngIf="exibirLista"></app-lista-mobile> -->
   </div>
 
