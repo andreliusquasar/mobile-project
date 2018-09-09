@@ -10,12 +10,12 @@ import { ContratosService } from './services/contratos.service';
 
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
-  title = 'app';
+  title = "app";
   contratos: Array<Contrato>;
   cpf: string;
   exibirLista = false;
@@ -24,19 +24,20 @@ export class AppComponent implements OnInit {
   contrato: Contrato;
   formularioContrato: Contrato;
 
+  public mask = [/\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '-', /\d/, /\d/,];
 
   // MODAL
   modalActions = new EventEmitter<string | MaterializeAction>();
   openModal() {
-    this.modalActions.emit({ action: 'modal', params: ['open'] });
+    this.modalActions.emit({ action: "modal", params: ["open"] });
   }
   closeModal() {
-    this.modalActions.emit({ action: 'modal', params: ['close'] });
+    this.modalActions.emit({ action: "modal", params: ["close"] });
     this.exibirForm = false;
     this.inicializarObjetos();
+    this.contrato.cliente.cpf = "";
   }
-    // MODAL
-
+  // MODAL
 
   constructor(private contratosService: ContratosService) {}
 
@@ -58,7 +59,6 @@ export class AppComponent implements OnInit {
     this.openModal();
   }
 
-
   getItemLista(contrato: Contrato): void {
     console.log(contrato);
     if (contrato) {
@@ -75,5 +75,10 @@ export class AppComponent implements OnInit {
     this.contrato.endereco = new Endereco();
     this.contrato.senhas = new Senha();
   }
+
+  mascara(cpf: string) {
+    console.log(cpf);
+  }
+
 
 }
