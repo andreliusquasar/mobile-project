@@ -28,3 +28,19 @@
 #lista-mobile {
   cursor: pointer;
 }
+.logotipo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logotipo > img {
+  width: 20%;
+}
+.nav-wrapper, .btn, .cor-btn {
+  background-color: #70ad47;
+}
+.cor-btn {
+  color: #fff;
+}
+
+
