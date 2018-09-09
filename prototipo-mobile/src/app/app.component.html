@@ -12,13 +12,12 @@
           </div>
       </div>
     </form>
-    <h5>Nome:</h5>
   </div>
 
   <div class="row">
-    <!-- <app-formulario></app-formulario> -->
-    <app-lista id="lista" [recebeContratos]="contratos" *ngIf="exibirLista" ></app-lista>
-    <app-lista-mobile id="lista-mobile" [recebeContratos]="contratos" *ngIf="exibirLista"></app-lista-mobile>
+    <app-formulario [contrato]="formularioContrato"></app-formulario>
+    <app-lista id="lista" [recebeContratos]="contratos" (selecionado)="recebeSelecionado($event)"></app-lista>
+    <!-- <app-lista-mobile id="lista-mobile" [recebeContratos]="contratos" *ngIf="exibirLista"></app-lista-mobile> -->
   </div>
 
 </div>
