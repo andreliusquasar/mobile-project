@@ -87,7 +87,7 @@
           </div>
         </div>
 
-        <div class="row user-mobile" *ngIf="false">
+        <div class="row user-mobile">
           <ul class="collection with-header">
             <li class="collection-header a-t-s">
               <h5>Cadastro de Senhas</h5>
@@ -95,12 +95,12 @@
             <li class="collection-item">
               <div class="org-input">
                 <div>
-                  <input name="usuarioInternetChecked" [(ngModel)]="contrato.senhas.usuarioInternetChecked" type="checkbox" id="check-1" checked>
+                  <input name="usuarioInternetChecked" [(ngModel)]="contrato.senhas.usuarioInternetChecked" type="checkbox" id="check-1">
                   <label for="check-1">671167</label>
                 </div>
                 <div class="input-field col s12 m4 l4 l-inp">
-                  <input name="usuarioInternet" [(ngModel)]="contrato.senhas.usuarioInternet" id="user-internet" type="text" class="validate">
-                  <label for="user-internet">Usuário Internet</label>
+                  <input name="usuarioInternet" #senhaInternet [(ngModel)]="contrato.senhas.usuarioInternet" id="user-internet" type="text" class="validate">
+                  <label for="user-internet" [ngClass]="{'active': senhaInternet.value}">Usuário Internet</label>
                 </div>
               </div>
             </li>
