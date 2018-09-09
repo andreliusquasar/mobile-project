@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '../../../node_modules/@angular/forms';
 import { Cliente } from '../models/cliente.model';
 import { Documento } from '../models/documento.model';
@@ -13,6 +13,7 @@ import { Contrato } from './../models/contrato.model';
 })
 export class FormularioComponent implements OnInit {
 
+  @Input()
   contrato: Contrato;
 
   constructor() { }

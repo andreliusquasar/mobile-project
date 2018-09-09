@@ -14,20 +14,28 @@ export class AppComponent implements OnInit {
   contratos: Array<Contrato>;
   cpf: string;
   exibirLista = false;
+  pesquisou = false;
+  selecionado: Contrato;
+  formularioContrato: Contrato;
 
   constructor(private contratosService: ContratosService) { }
 
   ngOnInit() {
-
+    this.contratos = this.contratosService.getContratos();
   }
 
   onPesquisar(formularioPesquisa: NgForm) {
 
-    this.contratos = this.contratosService.getContratoById(formularioPesquisa.value.cpf);
+    // this.contratos = this.contratosService.getContratoById(formularioPesquisa.value.cpf);
 
-    if (this.contratos.length > 0) {
-      this.exibirLista = true;
-    }
+    // if (this.contratos.length > 0) {
+    //   this.exibirLista = true;
+    // }
+  }
+
+  recebeSelecionado(itemLista: Contrato): void {
+    this.selecionado = itemLista;
+    this.formularioContrato = itemLista;
   }
 
 }
