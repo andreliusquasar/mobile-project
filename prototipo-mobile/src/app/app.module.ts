@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { MaterializeModule } from 'angular2-materialize';
+import { NgxMaskModule } from 'ngx-mask';
 import { AppComponent } from './app.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { ListaMobileComponent } from './lista-mobile/lista-mobile.component';
@@ -17,7 +18,7 @@ import { ContratosService } from './services/contratos.service';
     ListaComponent,
     ListaMobileComponent
   ],
-  imports: [BrowserModule, FormsModule, MaterializeModule],
+  imports: [BrowserModule, FormsModule, MaterializeModule, NgxMaskModule.forRoot()],
   providers: [ContratosService],
   bootstrap: [AppComponent]
 })
