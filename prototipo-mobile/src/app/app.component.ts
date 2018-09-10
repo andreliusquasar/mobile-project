@@ -29,13 +29,13 @@ export class AppComponent implements OnInit {
   // MODAL
   modalActions = new EventEmitter<string | MaterializeAction>();
   openModal() {
-    this.modalActions.emit({ action: "modal", params: ["open"] });
+    this.modalActions.emit({ action: 'modal', params: ['open'] });
   }
   closeModal() {
-    this.modalActions.emit({ action: "modal", params: ["close"] });
+    this.modalActions.emit({ action: 'modal', params: ['close'] });
     this.exibirForm = false;
     this.inicializarObjetos();
-    this.contrato.cliente.cpf = "";
+    this.contrato.cliente.cpf = '';
   }
   // MODAL
 
