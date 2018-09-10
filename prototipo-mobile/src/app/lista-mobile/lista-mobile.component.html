@@ -1,4 +1,4 @@
-<div class="col s12 cont-mob" *ngFor="let item of recebeContratos" >
+<div class="col s12 cont-mob" *ngFor="let item of contratoRecebido" (click)="getItemLista(item)">
   <div class="cont-item">
       <div class="col s6 cont-mat">Contrato</div>
       <div class="col s6 cont-mat">{{item.documento.contrato}}</div>

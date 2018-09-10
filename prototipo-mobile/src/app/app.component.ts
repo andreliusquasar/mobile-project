@@ -10,12 +10,12 @@ import { ContratosService } from './services/contratos.service';
 
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = "app";
+  title = 'app';
   contratos: Array<Contrato>;
   cpf: string;
   exibirLista = false;
@@ -43,6 +43,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.inicializarObjetos();
+    this.contratos = this.contratosService.getContratos();
   }
 
   onPesquisar(formularioPesquisa: NgForm) {
@@ -80,5 +81,8 @@ export class AppComponent implements OnInit {
     console.log(cpf);
   }
 
+  recebeContratoFilho(contrato: Contrato) {
+    console.log('Recebendo evendo do filho', contrato);
+  }
 
 }

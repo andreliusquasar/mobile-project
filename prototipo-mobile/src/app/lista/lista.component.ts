@@ -11,7 +11,7 @@ import { Contrato } from './../models/contrato.model';
 export class ListaComponent implements OnInit {
 
   @Input()
-  recebeContratos: Array<Contrato>;
+  contratoRecebido: Array<Contrato>;
 
   @Output()
   selecionado: EventEmitter<Contrato> = new EventEmitter<Contrato>();
@@ -27,7 +27,6 @@ export class ListaComponent implements OnInit {
 
   getItemLista(contrato: Contrato): void {
     this.selecionado.emit(contrato);
-    // console.log(contrato);
   }
 
 

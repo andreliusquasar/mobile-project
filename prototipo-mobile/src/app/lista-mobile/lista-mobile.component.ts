@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Contrato } from './../models/contrato.model';
 
 @Component({
@@ -9,11 +9,19 @@ import { Contrato } from './../models/contrato.model';
 export class ListaMobileComponent implements OnInit {
 
   @Input()
-  recebeContratos: Array<Contrato>;
+  contratoRecebido: Array<Contrato>;
+
+  @Output()
+  selecionado: EventEmitter<Contrato> = new EventEmitter<Contrato>();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getItemLista(contrato: Contrato): void {
+    console.log(contrato);
+    this.selecionado.emit(contrato);
   }
 
 }
