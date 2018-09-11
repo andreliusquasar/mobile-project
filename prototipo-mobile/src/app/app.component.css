@@ -1,3 +1,5 @@
+@import '../assets/config-style.css';
+
 .table-click {
   cursor: pointer;
 }
@@ -35,12 +37,6 @@
 }
 .logotipo > img {
   width: 125px;
-}
-.nav-wrapper, .btn, .cor-btn {
-  background-color: #70ad47;
-}
-.cor-btn {
-  color: #fff;
 }
 h5 {
   color: #ee6e73;
