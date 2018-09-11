@@ -5,26 +5,65 @@
 </nav>
 
 <div class="container">
+
   <div class="row">
+
     <form class="col s12" (ngSubmit)="onPesquisar(formularioPesquisa)"
-        #formularioPesquisa="ngForm" >
-      <div class="row pesq-form">
-          <div class="input-field col s12 m6">
+      #formularioPesquisa="ngForm">
+              <div class="row">
+
+                <!-- Switch -->
+                <div class="switch col s12 m6">
+                <label>
+                  CPF
+                  <input
+                  name="isCpf"
+                  type="checkbox"
+                  [(ngModel)]="isCpf"
+                  (change)="validaSwitch(isCpf)">
+                  <span class="lever"></span>
+                  CNPJ
+                </label>
+              </div>
+              <!-- Switch -->
+            </div>
+
+            <div class="row pesq-form" >
+              <div class="input-field col s12 m6" *ngIf="!isCpf">
+                <input
+                  [(ngModel)]="contrato?.cliente.cpf"
+                  name="cpf"
+                  id="last_name"
+                  type="text"
+                  class="validate"
+                  maxlength="14"
+                  mask="000.000.000-00"
+                  #cpf>
+                <label [ngClass]="{'active': cpf.value}"  for="last_name">CPF</label>
+            </div>
+
+            <div class="input-field col s12 m6" *ngIf="isCpf">
               <input
-                [(ngModel)]="contrato?.cliente.cpf"
-                name="cpf"
-                id="last_name"
+                [(ngModel)]="contrato?.cliente.cnpj"
+                name="cnpj"
+                id="cnpj"
                 type="text"
                 class="validate"
-                maxlength="14"
-                mask="000.000.000-00">
-              <label for="last_name">CPF</label>
+                maxlength="18"
+                mask="00.000.000/0000-00"
+                #cnpj
+                >
+              <label [ngClass]="{'active': cnpj.value}"  for="cnpj">CNPJ</label>
           </div>
+
           <div class="b-t input-field col s12 m6">
             <button type="submit" class="waves-effect waves-light btn">Pesquisar</button>
           </div>
+
       </div>
+
     </form>
+
   </div>
 
   <div class="row">
