@@ -1,27 +1,27 @@
-<div class="col s12 cont-mob" *ngFor="let item of recebeContratos" >
+<div class="col s12 cont-mob" *ngFor="let item of contratoRecebido" (click)="getItemLista(item)">
   <div class="cont-item">
       <div class="col s6 cont-mat">Contrato</div>
-      <div class="col s6 cont-mat">{{item.documento.contrato}}</div>
+      <div class="col s6 cont-mat">{{item?.documento.contrato}}</div>
   </div>
   <div class="cont-item">
       <div class="col s6 cont-mat">Tipo</div>
-      <div class="col s6 cont-mat">{{item.documento.tipo}}</div>
+      <div class="col s6 cont-mat">{{item?.documento.tipo}}</div>
   </div>
   <div class="cont-item">
       <div class="col s6 cont-mat">Fabricante</div>
-      <div class="col s6 cont-mat">{{item.documento.fabricante}}</div>
+      <div class="col s6 cont-mat">{{item?.documento.fabricante}}</div>
   </div>
   <div class="cont-item">
       <div class="col s6 cont-mat">Modelo</div>
-      <div class="col s6 cont-mat">{{item.documento.modelo}}</div>
+      <div class="col s6 cont-mat">{{item?.documento.modelo}}</div>
   </div>
   <div class="cont-item">
       <div class="col s6 cont-mat">Ano</div>
-      <div class="col s6 cont-mat">{{item.documento.ano}}</div>
+      <div class="col s6 cont-mat">{{item?.documento.ano}}</div>
   </div>
   <div class="cont-item">
       <div class="col s6 cont-mat">Placa</div>
-      <div class="col s6 cont-mat">{{item.documento.placa}}</div>
+      <div class="col s6 cont-mat">{{item?.documento.placa}}</div>
   </div>
 
 </div>
