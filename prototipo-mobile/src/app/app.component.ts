@@ -19,6 +19,8 @@ export class AppComponent implements OnInit {
   exibirLista = false;
   exibirForm = false;
   contrato: Contrato;
+  isCpf = false;
+
   readonly mask = [/\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '-', /\d/, /\d/];
 
   constructor(private contratosService: ContratosService) {}
@@ -28,8 +30,9 @@ export class AppComponent implements OnInit {
   }
 
   onPesquisar(formularioPesquisa: NgForm) {
+    console.log(formularioPesquisa.value)
     this.exibirForm = false;
-    this.contratos = this.contratosService.getContratoById(formularioPesquisa.value.cpf);
+    this.contratos = this.contratosService.getContratoById(formularioPesquisa.value);
     if (this.contratos.length > 0) {
       this.exibirLista = true;
     }
@@ -58,5 +61,21 @@ export class AppComponent implements OnInit {
       this.contrato.cliente.cpf = null;
     }
   }
+
+  validaSwitch(cpf) {
+    this.reiniciaComponents();
+    if (cpf) {
+      this.contrato.cliente.cnpj = null;
+      return;
+    }
+    this.contrato.cliente.cpf = null;
+  }
+
+  private reiniciaComponents() {
+    this.contratos = [];
+    this.exibirForm = false;
+    this.exibirLista = false;
+  }
+
 
 }
