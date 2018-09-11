@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MaterializeAction } from 'angular2-materialize';
 import { NgForm } from '../../../node_modules/@angular/forms';
 import { Contrato } from './../models/contrato.model';
 
@@ -12,13 +13,24 @@ export class FormularioComponent implements OnInit {
   @Input()
   contratoRecebido: Contrato;
 
+  @Output()
+  modalActions = new EventEmitter<string | MaterializeAction>();
+
   constructor() { }
 
   ngOnInit() {
   }
 
   onEditar(formularioEditar: NgForm) {
+    this.openModal();
+  }
 
+  openModal() {
+    this.modalActions.emit({ action: 'modal', params: ['open'] });
+  }
+
+  closeModal() {
+    this.modalActions.emit({ action: 'modal', params: ['close'] });
   }
 
 }

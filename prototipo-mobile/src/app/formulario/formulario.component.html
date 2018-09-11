@@ -101,6 +101,17 @@
         </div>
   </div>
 
+  <!-- MODAL -->
+  <div id="modal1" class="modal" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions">
+    <div class="modal-content">
+      <p>Alteração realizada com sucesso!</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat cor-btn" (click)="closeModal()">Fechar</a>
+    </div>
+  </div>
+  <!-- MODAL -->
+
 </form>
 
 
