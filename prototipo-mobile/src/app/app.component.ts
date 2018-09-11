@@ -1,6 +1,5 @@
-import { Component, EventEmitter, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { MaterializeAction } from 'angular2-materialize';
 import { Cliente } from './models/cliente.model';
 import { Contrato } from './models/contrato.model';
 import { Documento } from './models/documento.model';
@@ -22,25 +21,10 @@ export class AppComponent implements OnInit {
   contrato: Contrato;
   readonly mask = [/\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '-', /\d/, /\d/];
 
-
-  // MODAL
-  modalActions = new EventEmitter<string | MaterializeAction>();
-  openModal() {
-    this.modalActions.emit({ action: 'modal', params: ['open'] });
-  }
-  closeModal() {
-    this.modalActions.emit({ action: 'modal', params: ['close'] });
-    this.exibirForm = false;
-    this.inicializarObjetos();
-    this.contrato.cliente.cpf = '';
-  }
-  // MODAL
-
   constructor(private contratosService: ContratosService) {}
 
   ngOnInit() {
     this.inicializarObjetos();
-    this.contratos = this.contratosService.getContratos();
   }
 
   onPesquisar(formularioPesquisa: NgForm) {
@@ -48,19 +32,6 @@ export class AppComponent implements OnInit {
     this.contratos = this.contratosService.getContratoById(formularioPesquisa.value.cpf);
     if (this.contratos.length > 0) {
       this.exibirLista = true;
-    }
-  }
-
-  onEditar(formularioEdicao: NgForm) {
-    this.openModal();
-  }
-
-  getItemLista(contrato: Contrato): void {
-    console.log(contrato);
-    if (contrato) {
-      this.exibirLista = false;
-      this.exibirForm = true;
-      this.contrato = contrato;
     }
   }
 
@@ -78,6 +49,14 @@ export class AppComponent implements OnInit {
       this.exibirLista = false;
       this.exibirForm = true;
       }
+  }
+
+  acionaModal(actionModal ) {
+    if (actionModal && actionModal.params[0] === 'close') {
+      this.exibirForm = false;
+      this.exibirLista = false;
+      this.contrato.cliente.cpf = null;
+    }
   }
 
 }
