@@ -10,21 +10,18 @@ import { ContratosService } from './services/contratos.service';
 
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = "app";
+
   contratos: Array<Contrato>;
-  cpf: string;
   exibirLista = false;
   exibirForm = false;
-  pesquisou = false;
   contrato: Contrato;
-  formularioContrato: Contrato;
+  readonly mask = [/\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '-', /\d/, /\d/];
 
-  public mask = [/\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '-', /\d/, /\d/,];
 
   // MODAL
   modalActions = new EventEmitter<string | MaterializeAction>();
@@ -43,13 +40,12 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.inicializarObjetos();
+    this.contratos = this.contratosService.getContratos();
   }
 
   onPesquisar(formularioPesquisa: NgForm) {
     this.exibirForm = false;
-    this.contratos = this.contratosService.getContratoById(
-      formularioPesquisa.value.cpf
-    );
+    this.contratos = this.contratosService.getContratoById(formularioPesquisa.value.cpf);
     if (this.contratos.length > 0) {
       this.exibirLista = true;
     }
@@ -76,9 +72,12 @@ export class AppComponent implements OnInit {
     this.contrato.senhas = new Senha();
   }
 
-  mascara(cpf: string) {
-    console.log(cpf);
+  recebeContratoFilho(contrato: Contrato) {
+    if (contrato) {
+      this.contrato = contrato;
+      this.exibirLista = false;
+      this.exibirForm = true;
+      }
   }
-
 
 }
