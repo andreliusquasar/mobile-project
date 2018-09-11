@@ -1,4 +1,7 @@
 export class Cliente {
+
+  public cnpj?: string;
+
   public cpf?: string;
 
   public rg?: string;

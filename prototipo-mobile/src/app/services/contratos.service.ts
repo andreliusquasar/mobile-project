@@ -12,6 +12,7 @@ export class ContratosService {
     return [
       {
         cliente: {
+          cnpj: '00000000000000',
           cpf: '00000000000',
           rg: '125.485.485',
           telefone: '11-32584-45875',
@@ -47,6 +48,7 @@ export class ContratosService {
       },
       {
         cliente: {
+          cnpj: '00000000000000',
           cpf: '11111111111',
           rg: '300.128.154-5',
           telefone: '11-222-5484',
@@ -82,6 +84,7 @@ export class ContratosService {
       },
       {
         cliente: {
+          cnpj: '00000000000000',
           cpf: '22222222222',
           rg: '487.600.000-x',
           telefone: '11-32598-9958',
@@ -117,6 +120,7 @@ export class ContratosService {
       },
       {
         cliente: {
+          cnpj: '11111111111111',
           cpf: '33333333333',
           rg: '658.999.365-Z',
           telefone: '11-222-5484',
@@ -152,6 +156,7 @@ export class ContratosService {
       },
       {
         cliente: {
+          cnpj: '11111111111111',
           cpf: '00000000000',
           rg: '125.485.485',
           telefone: '11-222-5484',
@@ -187,6 +192,7 @@ export class ContratosService {
       },
       {
         cliente: {
+          cnpj: '33333333333333',
           cpf: '00000000000',
           rg: '125.485.485',
           telefone: '11-222-5484',
@@ -222,6 +228,7 @@ export class ContratosService {
       },
       {
         cliente: {
+          cnpj: '33333333333333',
           cpf: '00000000000',
           rg: '125.485.485',
           telefone: '11-222-5484',
@@ -257,6 +264,7 @@ export class ContratosService {
       },
       {
         cliente: {
+          cnpj: '33333333333333',
           cpf: '11111111111',
           rg: '125.485.485',
           telefone: '11-222-5484',
@@ -292,6 +300,7 @@ export class ContratosService {
       },
       {
         cliente: {
+          cnpj: '33333333333333',
           cpf: '11111111111',
           rg: '125.485.485',
           telefone: '11-222-5484',
@@ -327,6 +336,7 @@ export class ContratosService {
       },
       {
         cliente: {
+          cnpj: '44444444444444',
           cpf: '11111111111',
           rg: '125.485.485',
           telefone: '11-222-5484',
@@ -362,6 +372,7 @@ export class ContratosService {
       },
       {
         cliente: {
+          cnpj: '44444444444444',
           cpf: '22222222222',
           rg: '125.485.485',
           telefone: '11-222-5484',
@@ -397,6 +408,7 @@ export class ContratosService {
       },
       {
         cliente: {
+          cnpj: '44444444444444',
           cpf: '22222222222',
           rg: '125.485.485',
           telefone: '11-222-5484',
@@ -432,6 +444,7 @@ export class ContratosService {
       },
       {
         cliente: {
+          cnpj: '44444444444444',
           cpf: '33333333333',
           rg: '125.485.485',
           telefone: '11-222-5484',
@@ -467,6 +480,7 @@ export class ContratosService {
       },
       {
         cliente: {
+          cnpj: '44444444444444',
           cpf: '44444444444',
           rg: '125.485.485',
           telefone: '11-222-5484',
@@ -503,12 +517,22 @@ export class ContratosService {
     ];
   }
 
-  getContratoById(id: string) {
+  getContratoById(cliente) {
     const contratos = this.getContratos();
     let result;
+
     result = contratos.filter(el => {
-      return id === el.cliente.cpf;
+
+      if (!cliente.isCpf) {
+        return cliente.cpf === el.cliente.cpf;
+      }
+
+      if (cliente.isCpf) {
+        return cliente.cnpj === el.cliente.cnpj;
+      }
+
     });
+
     return result;
   }
 
