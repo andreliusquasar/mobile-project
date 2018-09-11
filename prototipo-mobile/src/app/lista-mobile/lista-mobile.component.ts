@@ -20,7 +20,6 @@ export class ListaMobileComponent implements OnInit {
   }
 
   getItemLista(contrato: Contrato): void {
-    console.log(contrato);
     this.selecionado.emit(contrato);
   }
 

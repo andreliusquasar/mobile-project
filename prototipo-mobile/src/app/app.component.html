@@ -1,8 +1,6 @@
 <nav>
   <div class="nav-wrapper logotipo">
-    <!-- <a href="#" class="brand-logo center">Logo</a> -->
     <img src="../assets/img/logotipo.png" alt="">
-
   </div>
 </nav>
 
@@ -19,8 +17,7 @@
                 type="text"
                 class="validate"
                 maxlength="14"
-                mask="000.000.000-00"
-                >
+                mask="000.000.000-00">
               <label for="last_name">CPF</label>
           </div>
           <div class="b-t input-field col s12 m6">
@@ -31,23 +28,21 @@
   </div>
 
   <div class="row">
-    <!-- <app-formulario></app-formulario> -->
+    <app-formulario [contratoRecebido]="contrato" *ngIf="exibirForm"></app-formulario>
     <app-lista [contratoRecebido]="contratos" (selecionado)="recebeContratoFilho($event)" *ngIf="exibirLista" id="lista"></app-lista>
     <app-lista-mobile [contratoRecebido]="contratos" (selecionado)="recebeContratoFilho($event)" *ngIf="exibirLista" id="lista-mobile"></app-lista-mobile>
-
-
   </div>
 
 
-<!-- MODAL -->
-<div id="modal1" class="modal" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions">
-  <div class="modal-content">
-    <p>Alteração realizada com sucesso!</p>
+  <!-- MODAL -->
+  <div id="modal1" class="modal" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions">
+    <div class="modal-content">
+      <p>Alteração realizada com sucesso!</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat cor-btn" (click)="closeModal()">Fechar</a>
+    </div>
   </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-close waves-effect waves-green btn-flat cor-btn" (click)="closeModal()">Fechar</a>
-  </div>
-</div>
-<!-- MODAL -->
+  <!-- MODAL -->
 
 </div>
