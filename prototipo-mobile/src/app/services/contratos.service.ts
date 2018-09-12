@@ -518,22 +518,9 @@ export class ContratosService {
   }
 
   getContratoById(cliente) {
-    const contratos = this.getContratos();
-    let result;
-
-    result = contratos.filter(el => {
-
-      if (!cliente.isCpf) {
-        return cliente.cpf === el.cliente.cpf;
-      }
-
-      if (cliente.isCpf) {
-        return cliente.cnpj === el.cliente.cnpj;
-      }
-
-    });
-
-    return result;
+    const key = cliente.isCpf ? 'cnpj' : 'cpf';
+    const contratos = this.getContratos ();
+    return contratos.filter(el => el.cliente[key] === cliente[key]);
   }
 
 }
