@@ -13,12 +13,16 @@ export class FormularioComponent implements OnInit {
   @Input()
   contratoRecebido: Contrato;
 
+  @Input()
+  contratosRecebidos: Array<Contrato>;
+
   @Output()
   modalActions = new EventEmitter<string | MaterializeAction>();
 
   constructor() { }
 
   ngOnInit() {
+    console.log(this.contratoRecebido);
   }
 
   onEditar(formularioEditar: NgForm) {

@@ -10,11 +10,24 @@ h5 {
 .org-input {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    /* align-items: center; */
 }
 .l-inp {
-  margin-left: 40px!important;
+  margin-left: 0px!important;
 }
+.a-t-s {
+  background-color: #70ad47!important;
+  color: #ffffff;
+}
+
 .a-t-s h5{
-  color: #26a69a;
+  color: #ffffff;
+}
+
+.ff {
+  border:1px solid red;
+}
+
+.list-senhas {
+  border: 1px solid green;
 }

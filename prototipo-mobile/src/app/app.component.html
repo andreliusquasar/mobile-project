@@ -67,7 +67,7 @@
   </div>
 
   <div class="row">
-    <app-formulario [contratoRecebido]="contrato" (modalActions)="acionaModal($event)" *ngIf="exibirForm"></app-formulario>
+    <app-formulario [contratoRecebido]="contrato" [contratosRecebidos]="contratos" (modalActions)="acionaModal($event)" *ngIf="true"></app-formulario>
     <app-lista [contratoRecebido]="contratos" (selecionado)="recebeContratoFilho($event)" *ngIf="exibirLista" id="lista"></app-lista>
     <app-lista-mobile [contratoRecebido]="contratos" (selecionado)="recebeContratoFilho($event)" *ngIf="exibirLista" id="lista-mobile"></app-lista-mobile>
   </div>
