@@ -75,7 +75,7 @@ export class ContratosService {
         },
         senhas: {
           usuarioInternetChecked: true,
-          usuarioInternet: 'XSDEF201',
+          usuarioInternet: 'EEDXOS',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -111,7 +111,7 @@ export class ContratosService {
         },
         senhas: {
           usuarioInternetChecked: true,
-          usuarioInternet: 'XSDEF201',
+          usuarioInternet: 'DD5474',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -147,7 +147,7 @@ export class ContratosService {
         },
         senhas: {
           usuarioInternetChecked: true,
-          usuarioInternet: 'XSDEF201',
+          usuarioInternet: 'ODJFIS',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -183,7 +183,7 @@ export class ContratosService {
         },
         senhas: {
           usuarioInternetChecked: true,
-          usuarioInternet: 'XSDEF201',
+          usuarioInternet: '41SDD7',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -219,7 +219,7 @@ export class ContratosService {
         },
         senhas: {
           usuarioInternetChecked: true,
-          usuarioInternet: 'XSDEF201',
+          usuarioInternet: 'OSUS5S',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -255,7 +255,7 @@ export class ContratosService {
         },
         senhas: {
           usuarioInternetChecked: true,
-          usuarioInternet: 'XSDEF201',
+          usuarioInternet: 'ELDOID4',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -291,7 +291,7 @@ export class ContratosService {
         },
         senhas: {
           usuarioInternetChecked: true,
-          usuarioInternet: 'XSDEF201',
+          usuarioInternet: '1547SD',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -327,7 +327,7 @@ export class ContratosService {
         },
         senhas: {
           usuarioInternetChecked: true,
-          usuarioInternet: 'XSDEF201',
+          usuarioInternet: 'ODJF7',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -363,7 +363,7 @@ export class ContratosService {
         },
         senhas: {
           usuarioInternetChecked: true,
-          usuarioInternet: 'XSDEF201',
+          usuarioInternet: 'ERRUDG',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -399,7 +399,7 @@ export class ContratosService {
         },
         senhas: {
           usuarioInternetChecked: true,
-          usuarioInternet: 'XSDEF201',
+          usuarioInternet: 'LDJSST',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -435,7 +435,7 @@ export class ContratosService {
         },
         senhas: {
           usuarioInternetChecked: true,
-          usuarioInternet: 'XSDEF201',
+          usuarioInternet: '1KJGT7',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -471,7 +471,7 @@ export class ContratosService {
         },
         senhas: {
           usuarioInternetChecked: true,
-          usuarioInternet: 'XSDEF201',
+          usuarioInternet: '5SFF87',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -481,7 +481,7 @@ export class ContratosService {
       {
         cliente: {
           cnpj: '44444444444444',
-          cpf: '44444444444',
+          cpf: '22222222222',
           rg: '125.485.485',
           telefone: '11-222-5484',
           celular: '11-9999-9999',
@@ -507,7 +507,7 @@ export class ContratosService {
         },
         senhas: {
           usuarioInternetChecked: true,
-          usuarioInternet: 'XSDEF201',
+          usuarioInternet: '68HHOF',
           senhaInternetChecked: null,
           senhaInternet: null,
           senhaSegurancaChecked: null,
@@ -518,22 +518,9 @@ export class ContratosService {
   }
 
   getContratoById(cliente) {
-    const contratos = this.getContratos();
-    let result;
-
-    result = contratos.filter(el => {
-
-      if (!cliente.isCpf) {
-        return cliente.cpf === el.cliente.cpf;
-      }
-
-      if (cliente.isCpf) {
-        return cliente.cnpj === el.cliente.cnpj;
-      }
-
-    });
-
-    return result;
+    const key = cliente.isCpf ? 'cnpj' : 'cpf';
+    const contratos = this.getContratos ();
+    return contratos.filter(el => el.cliente[key] === cliente[key]);
   }
 
 }
