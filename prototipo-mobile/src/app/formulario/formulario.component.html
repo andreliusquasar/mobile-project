@@ -63,8 +63,8 @@
               <label for="check-1">671167</label>
             </div>
             <div class="input-field col s12 m4 l4 l-inp">
-              <input name="usuarioInternet" [(ngModel)]="contratoRecebido.senhas.usuarioInternet" id="user-internet" type="text" class="validate">
-              <label for="user-internet">Usuário Internet</label>
+              <input #senhaUser name="usuarioInternet" [(ngModel)]="contratoRecebido.senhas.usuarioInternet" id="user-internet" type="text" class="validate">
+              <label [ngClass]="{'active': senhaUser.value}" for="user-internet">Usuário Internet</label>
             </div>
           </div>
         </li>
