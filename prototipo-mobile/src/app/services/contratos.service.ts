@@ -445,7 +445,7 @@ export class ContratosService {
       {
         cliente: {
           cnpj: '44444444444444',
-          cpf: '33333333333',
+          cpf: '55555555555',
           rg: '125.485.485',
           telefone: '11-222-5484',
           celular: '11-9999-9999',
@@ -481,7 +481,7 @@ export class ContratosService {
       {
         cliente: {
           cnpj: '44444444444444',
-          cpf: '22222222222',
+          cpf: '55555555555',
           rg: '125.485.485',
           telefone: '11-222-5484',
           celular: '11-9999-9999',
@@ -506,7 +506,7 @@ export class ContratosService {
           placa: 'XIY2845'
         },
         senhas: {
-          usuarioInternetChecked: false,
+          usuarioInternetChecked: true,
           usuarioInternet: '68HHOF',
           senhaInternetChecked: null,
           senhaInternet: null,
