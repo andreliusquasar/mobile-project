@@ -53,48 +53,11 @@
     </div>
   </div>
 
-  <div class="row user-mobile" *ngIf="true" >
+  <!-- CADASTRO DE SENHAS -->
+  <div class="row user-mobile">
     <ul class="collection with-header">
       <li class="collection-header a-t-s"><h5>Cadastro de Senhas</h5></li>
-
-      <!-- <li class="collection-item">
-          <div class="org-input">
-            <div>
-              <input name="usuarioInternetChecked" [(ngModel)]="contratoRecebido.senhas.usuarioInternetChecked" type="checkbox" id="check-1" checked>
-              <label for="check-1">671167</label>
-            </div>
-            <div class="input-field col s12 m4 l4 l-inp">
-              <input #senhaUser name="usuarioInternet" [(ngModel)]="contratoRecebido.senhas.usuarioInternet" id="user-internet" type="text" class="validate">
-              <label [ngClass]="{'active': senhaUser.value}" for="user-internet">Usuário Internet</label>
-            </div>
-          </div>
-        </li>
-        <li class="collection-item">
-          <div class="org-input">
-            <div>
-              <input name="senhaInternetChecked" [(ngModel)]="contratoRecebido.senhas.senhaInternetChecked" type="checkbox" id="check-2">
-              <label for="check-2">671191</label>
-            </div>
-            <div class="input-field col s12 m4 l4 l-inp">
-              <input name="senhaInternet" [(ngModel)]="contratoRecebido.senhas.senhaInternet" id="senha-internet" type="text" class="validate">
-              <label for="senha-internet">Senha Internet</label>
-            </div>
-          </div>
-        </li>
-        <li class="collection-item">
-          <div class="org-input">
-            <div>
-              <input name="senhaSegurancaChecked" [(ngModel)]="contratoRecebido.senhas.senhaSegurancaChecked" type="checkbox" id="check-3">
-              <label for="check-3">671608</label>
-            </div>
-            <div class="input-field col s12 m4 l4 l-inp">
-              <input name="senhaSeguranca" [(ngModel)]="contratoRecebido.senhas.senhaSeguranca" id="senha-seguranca" type="text" class="validate">
-              <label for="senha-seguranca">Senha Segurança</label>
-            </div>
-          </div>
-        </li> -->
     </ul>
-
 
     <div class="row">
         <div class="input-field col s12 m4 l4">
@@ -110,15 +73,23 @@
             <label for="senha-seguranca">Senha Segurança</label>
         </div>
       </div>
-
-
-
-
-
-
-
-
   </div>
+  <!-- CADASTRO DE SENHAS -->
+
+
+  <!-- APLICAR A TODOS -->
+  <div class="row ap-todos">
+    <ul class="collection with-header col s12 m6 l6 ul-todos">
+      <li class="collection-header a-t-s"><h5>Aplicar a Todos</h5></li>
+      <li class="collection-item" *ngFor="let item of contratosRecebidos" >
+          <!-- <div> -->
+            <input name="{{item.documento.contrato}}" [(ngModel)]="item.senhas.usuarioInternetChecked" type="checkbox" id="{{item.documento.contrato}}">
+            <label for="{{item.documento.contrato}}">{{item.documento.contrato}}</label>
+          <!-- </div> -->
+      </li>
+    </ul>
+  </div>
+  <!-- APLICAR A TODOS -->
 
   <div class="row">
       <div class="b-t input-field col s12 m6">
