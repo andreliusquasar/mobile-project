@@ -24,10 +24,19 @@ h5 {
   color: #ffffff;
 }
 
-.ff {
-  border:1px solid red;
-}
-
 .list-senhas {
   border: 1px solid green;
+}
+
+.user-mobile {
+  margin-bottom: 0px;
+}
+
+.ap-todos {
+  margin-top: 2px;
+}
+
+.ul-todos {
+  padding-left: 0;
+  padding-right: 0;
 }

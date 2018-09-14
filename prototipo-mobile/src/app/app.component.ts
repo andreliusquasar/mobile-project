@@ -30,11 +30,11 @@ export class AppComponent implements OnInit {
   }
 
   onPesquisar(formularioPesquisa: NgForm) {
-    console.log(formularioPesquisa.value)
     this.exibirForm = false;
     this.contratos = this.contratosService.getContratoById(formularioPesquisa.value);
     if (this.contratos.length > 0) {
       this.exibirLista = true;
+      console.log(this.contratos);
     }
   }
 

@@ -30,7 +30,7 @@ export class ContratosService {
           cep: '00000000'
         },
         documento: {
-          contrato: '671167',
+          contrato: '0001',
           tipo: 'CARRO',
           fabricante: 'CHEVROLET',
           modelo: 'Corsa Sed. Maxx 1.0 / 1.0 Flexpower 8V 4P',
@@ -66,7 +66,7 @@ export class ContratosService {
           cep: '01504-584'
         },
         documento: {
-          contrato: '671191',
+          contrato: '0002',
           tipo: 'UTILITARIO',
           fabricante: 'FORD',
           modelo: 'F-250 XLT 3.9 4X2 DIESEL TB',
@@ -102,7 +102,7 @@ export class ContratosService {
           cep: '03265-6548'
         },
         documento: {
-          contrato: '671608',
+          contrato: '0003',
           tipo: 'CARRO',
           fabricante: 'HYUNDAI',
           modelo: 'HR 2.5 TCI DIESEL (RS/RD)',
@@ -138,7 +138,7 @@ export class ContratosService {
           cep: '32658-965'
         },
         documento: {
-          contrato: '671899',
+          contrato: '0004',
           tipo: 'CARRO',
           fabricante: 'FORD',
           modelo: 'F-250 XLT 3.9 4X2 DIESEL TB',
@@ -174,7 +174,7 @@ export class ContratosService {
           cep: '95847-658'
         },
         documento: {
-          contrato: '671578',
+          contrato: '0005',
           tipo: 'UTILITARIO',
           fabricante: 'HYUNDAI',
           modelo: 'HR 2.0 TCI DIESEL (RS/RD)',
@@ -193,7 +193,7 @@ export class ContratosService {
       {
         cliente: {
           cnpj: '33333333333333',
-          cpf: '00000000000',
+          cpf: '33333333333',
           rg: '125.485.485',
           telefone: '11-222-5484',
           celular: '11-9999-9999',
@@ -210,7 +210,7 @@ export class ContratosService {
           cep: '00000000'
         },
         documento: {
-          contrato: '671578',
+          contrato: '0006',
           tipo: 'UTILITARIO',
           fabricante: 'HYUNDAI',
           modelo: 'HR 2.0 TCI DIESEL (RS/RD)',
@@ -246,7 +246,7 @@ export class ContratosService {
           cep: '00000000'
         },
         documento: {
-          contrato: '671578',
+          contrato: '0007',
           tipo: 'UTILITARIO',
           fabricante: 'HYUNDAI',
           modelo: 'HR 2.0 TCI DIESEL (RS/RD)',
@@ -254,7 +254,7 @@ export class ContratosService {
           placa: 'XIY2845'
         },
         senhas: {
-          usuarioInternetChecked: true,
+          usuarioInternetChecked: false,
           usuarioInternet: 'ELDOID4',
           senhaInternetChecked: null,
           senhaInternet: null,
@@ -282,7 +282,7 @@ export class ContratosService {
           cep: '00000000'
         },
         documento: {
-          contrato: '671578',
+          contrato: '0008',
           tipo: 'UTILITARIO',
           fabricante: 'HYUNDAI',
           modelo: 'HR 2.0 TCI DIESEL (RS/RD)',
@@ -290,7 +290,7 @@ export class ContratosService {
           placa: 'XIY2845'
         },
         senhas: {
-          usuarioInternetChecked: true,
+          usuarioInternetChecked: false,
           usuarioInternet: '1547SD',
           senhaInternetChecked: null,
           senhaInternet: null,
@@ -318,7 +318,7 @@ export class ContratosService {
           cep: '00000000'
         },
         documento: {
-          contrato: '671578',
+          contrato: '0009',
           tipo: 'UTILITARIO',
           fabricante: 'HYUNDAI',
           modelo: 'HR 2.0 TCI DIESEL (RS/RD)',
@@ -326,7 +326,7 @@ export class ContratosService {
           placa: 'XIY2845'
         },
         senhas: {
-          usuarioInternetChecked: true,
+          usuarioInternetChecked: false,
           usuarioInternet: 'ODJF7',
           senhaInternetChecked: null,
           senhaInternet: null,
@@ -354,7 +354,7 @@ export class ContratosService {
           cep: '00000000'
         },
         documento: {
-          contrato: '671578',
+          contrato: '00010',
           tipo: 'UTILITARIO',
           fabricante: 'HYUNDAI',
           modelo: 'HR 2.0 TCI DIESEL (RS/RD)',
@@ -362,7 +362,7 @@ export class ContratosService {
           placa: 'XIY2845'
         },
         senhas: {
-          usuarioInternetChecked: true,
+          usuarioInternetChecked: false,
           usuarioInternet: 'ERRUDG',
           senhaInternetChecked: null,
           senhaInternet: null,
@@ -390,7 +390,7 @@ export class ContratosService {
           cep: '00000000'
         },
         documento: {
-          contrato: '671578',
+          contrato: '00011',
           tipo: 'UTILITARIO',
           fabricante: 'HYUNDAI',
           modelo: 'HR 2.0 TCI DIESEL (RS/RD)',
@@ -398,7 +398,7 @@ export class ContratosService {
           placa: 'XIY2845'
         },
         senhas: {
-          usuarioInternetChecked: true,
+          usuarioInternetChecked: false,
           usuarioInternet: 'LDJSST',
           senhaInternetChecked: null,
           senhaInternet: null,
@@ -426,7 +426,7 @@ export class ContratosService {
           cep: '00000000'
         },
         documento: {
-          contrato: '671578',
+          contrato: '00012',
           tipo: 'UTILITARIO',
           fabricante: 'HYUNDAI',
           modelo: 'HR 2.0 TCI DIESEL (RS/RD)',
@@ -434,7 +434,7 @@ export class ContratosService {
           placa: 'XIY2845'
         },
         senhas: {
-          usuarioInternetChecked: true,
+          usuarioInternetChecked: false,
           usuarioInternet: '1KJGT7',
           senhaInternetChecked: null,
           senhaInternet: null,
@@ -462,7 +462,7 @@ export class ContratosService {
           cep: '00000000'
         },
         documento: {
-          contrato: '671578',
+          contrato: '00013',
           tipo: 'UTILITARIO',
           fabricante: 'HYUNDAI',
           modelo: 'HR 2.0 TCI DIESEL (RS/RD)',
@@ -470,7 +470,7 @@ export class ContratosService {
           placa: 'XIY2845'
         },
         senhas: {
-          usuarioInternetChecked: true,
+          usuarioInternetChecked: false,
           usuarioInternet: '5SFF87',
           senhaInternetChecked: null,
           senhaInternet: null,
@@ -498,7 +498,7 @@ export class ContratosService {
           cep: '00000000'
         },
         documento: {
-          contrato: '671578',
+          contrato: '00014',
           tipo: 'UTILITARIO',
           fabricante: 'HYUNDAI',
           modelo: 'HR 2.0 TCI DIESEL (RS/RD)',
@@ -506,7 +506,7 @@ export class ContratosService {
           placa: 'XIY2845'
         },
         senhas: {
-          usuarioInternetChecked: true,
+          usuarioInternetChecked: false,
           usuarioInternet: '68HHOF',
           senhaInternetChecked: null,
           senhaInternet: null,
